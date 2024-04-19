@@ -1,0 +1,179 @@
+/* Reset des styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #333; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Couleur au survol */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav .panier-actions {
+    margin-left: auto;
+}
+
+.vider-panier,
+.commander {
+    display: inline-block;
+    background-color: #007bff; /* Couleur du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.vider-panier:hover,
+.commander:hover {
+    background-color: #0056b3; /* Couleur du bouton au survol */
+}
+
+/* Contenu principal */
+main {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.produit {
+    margin-bottom: 20px;
+    background-color: #fff; /* Couleur de fond des produits */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+
+.produit img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.produit h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.produit p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.prix {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff; /* Couleur du prix */
+}
+
+.ajouter-panier {
+    margin-top: 10px;
+    background-color: #007bff; /* Couleur du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ajouter-panier:hover {
+    background-color: #0056b3; /* Couleur du bouton au survol */
+}
+
+/* Panier */
+aside {
+    flex-basis: 250px;
+}
+
+.panier {
+    background-color: #fff; /* Couleur de fond */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+
+.panier ul {
+    list-style-type: none;
+}
+
+.panier ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Médias queries pour appareils mobiles */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .produit {
+        flex-basis: 100%;
+    }
+
+    aside {
+        flex-basis: 100%;
+    }
+}
