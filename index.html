@@ -35,36 +35,26 @@
     <!-- Contenu principal -->
     <main>
         <div class="container">
-            <section id="categories">
-                <h2>Catégories</h2>
-                <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">XT 550</a></li>
-                    <li><a href="#">XT 600</a></li>
-                    <li><a href="#">XTZ 660</a></li>
-                    <li><a href="#">XTZ 750</a></li>
-                    <li><a href="#">TTR 600R</a></li>
-                    <li><a href="#">BMW 1200 GS</a></li>
-                    <li><a href="#">Transverse</a></li>
-                    <li><a href="#">Autres</a></li>
-                    <!-- Ajoute d'autres catégories si nécessaire -->
-                </ul>
-            </section>
 
             <section id="produits">
                 <h2>Produits</h2>
                 <div class="produit">
-                        <a href="https://drive.google.com/file/d/1fJkQyc3HcQ1-tlbPuq4KzDZIvSGLKCbG/view?usp=drivesdk">
-                            <img src="https://drive.google.com/thumbnail?id=1fJkQyc3HcQ1-tlbPuq4KzDZIvSGLKCbG" alt="Nom de l'article"></a>
-                        <a href="https://drive.google.com/file/d/12bBUVECCaw588W9gIDEwgBtFFb5c8rZp/view?usp=drivesdk">
-                            <img src="https://drive.google.com/thumbnail?id=12bBUVECCaw588W9gIDEwgBtFFb5c8rZp" alt="Nom de l'article"></a>
-                        <a href="https://drive.google.com/file/d/1M2fcywvc-5Pz9kRB9rL1MJ_tTQlEIMyh/view?usp=drivesdk">
-                            <img src="https://drive.google.com/thumbnail?id=1M2fcywvc-5Pz9kRB9rL1MJ_tTQlEIMyh" alt="Nom de l'article"></a>  
-                        <!-- Ajoute d'autres images si nécessaire -->
+                    <div class="images-container">
+                        <img class="image active" src="https://drive.google.com/thumbnail?id=1fJkQyc3HcQ1-tlbPuq4KzDZIvSGLKCbG" alt="Nom de l'article">
+                        <img class="image" src="https://drive.google.com/thumbnail?id=12bBUVECCaw588W9gIDEwgBtFFb5c8rZp" alt="Nom de l'article">
+                        <img class="image" src="https://drive.google.com/thumbnail?id=1M2fcywvc-5Pz9kRB9rL1MJ_tTQlEIMyh" alt="Nom de l'article">
+                    </div>
+                    
+                    <div class="controls">
+                        <button id="prevBtn" class="control-btn">&lt;</button>
+                        <button id="nextBtn" class="control-btn">&gt;</button>
+                    </div>
+
                     <h3>Nom du produit</h3>
                     <p>Description du produit</p>
                     <span class="prix">Prix: $XX.XX</span>
                     <button class="ajouter-panier">Ajouter au panier</button>
+                    
                 </div>
                 <!-- Répéter ce bloc pour chaque produit -->
 

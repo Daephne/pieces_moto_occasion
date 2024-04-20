@@ -1,16 +1,25 @@
-const slide = ["https://drive.google.com/thumbnail?id=1fJkQyc3HcQ1-tlbPuq4KzDZIvSGLKCbG", "https://drive.google.com/thumbnail?id=1M2fcywvc-5Pz9kRB9rL1MJ_tTQlEIMyh", "https://drive.google.com/thumbnail?id=1fJkQyc3HcQ1-tlbPuq4KzDZIvSGLKCbG"];
-let numero = 0;
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".image");
+    let currentIndex = 0;
 
-function ChangeSlide(sens) {
-    numero = numero + sens;
-    if (numero < 0)
-        numero = slide.length - 1;
-    if (numero > slide.length - 1)
-        numero = 0;
-    document.getElementById("slide").src = slide[numero];
-}
+    function showImage(index) {
+        images.forEach(image => image.classList.remove("active"));
+        images[index].classList.add("active");
+    }
 
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
 
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+
+    document.getElementById("nextBtn").addEventListener("click", nextImage);
+    document.getElementById("prevBtn").addEventListener("click", prevImage);
+});
 
 
 function chargerCSV(chemin) {

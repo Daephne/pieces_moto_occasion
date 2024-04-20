@@ -1,35 +1,52 @@
-#slider {
+.images-container {
     position: relative;
-    width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
+    height: 160px; /* Ajustez la hauteur selon vos besoins */
+    overflow: hidden;
+    margin-bottom: 1px; /* Ajoutez ou ajustez la marge en bas si nécessaire */
 }
 
-#precedent,
-#suivant {
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-    opacity: 0;
+.image {
     position: absolute;
-    font-size: 100px;
-    color: rgba(220, 220, 220, 0.8);
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-}
-
-#precedent {
+    top: 0;
     left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
-#suivant {
-    right: 0;
-}
-
-#slider:hover #precedent,
-#slider:hover #suivant {
+.image.active {
     opacity: 1;
 }
+
+.controls {
+    position: absolute;
+    bottom: 70%;
+    left: 0;
+    transform: translateY(50%);
+    width: 100%; /* Prend toute la largeur du parent */
+    display: flex;
+    justify-content: space-between; /* Espacement uniforme des boutons */
+}
+
+.control-btn {
+    background-color: #ffffff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #007bff;
+    padding: 5px 10px;
+    border-radius: 5px; /* Ajout du bord arrondi */
+    margin: 1px; /* Ajustez la marge horizontale entre les boutons si nécessaire */
+
+}
+
+.control-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
 /* Styles de base */
 body {
     font-family: Arial, sans-serif;
@@ -97,6 +114,19 @@ header nav .panier-actions {
 .vider-panier:hover,
 .commander:hover {
     background-color: #0056b3; /* Couleur du bouton au survol */
+}.control-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold; /* Ajout du style en gras */
+    color: #007bff; /* Couleur du texte du bouton */
+    padding: 5px 10px; /* Ajustement du padding */
+}
+
+.control-btn:hover {
+    background-color: #007bff; /* Couleur du bouton au survol */
+    color: #fff; /* Couleur du texte au survol */
 }
 
 /* Contenu principal */
@@ -112,6 +142,7 @@ section {
 }
 
 .produit {
+    position: relative;
     margin-bottom: 20px;
     background-color: #fff; /* Couleur de fond des produits */
     padding: 20px;
